@@ -1,0 +1,38 @@
+1.
+SELECT manufacturer as gyarto_neve, COUNT(*) as darabszam
+FROM transport
+GROUP BY manufacturer
+
+2.
+SELECT model, manufacturer, image
+FROM transport
+ORDER BY cargo_capacity DESC
+LIMIT 3
+
+3. - (szerintem hibásan van megadva a feladat szövege, de a feladatot legjobb tudásom szerint értelmezve a lekérdezés így néz ki)
+SELECT model as Tipus
+FROM transport
+WHERE cargo_capacity = 1 
+AND passengers = 1 
+AND max_atmosphering_speed = 1 
+AND crew = 1
+AND manufacturer LIKE "A%" OR "B%" OR "C%"
+
+4.
+SELECT *
+FROM transport
+WHERE manufacturer LIKE "%Corporation%" 
+AND passengers > 0 
+AND cost_in_credits BETWEEN 10000 AND 200000
+
+5.
+SELECT model as Megnevezes, manufacturer AS Gyarto
+FROM transport
+WHERE passengers IS NOT NULL
+AND passengers <> 0
+AND cargo_capacity IS NOT NULL
+AND cargo_capacity <> 0
+GROUP BY crew
+HAVING crew BETWEEN 1 AND 5
+LIMIT 3
+

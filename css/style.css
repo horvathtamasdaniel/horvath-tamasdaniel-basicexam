@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-size: 16px;
+}
+
+div {
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.container:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.container>div {
+  float: left;
+  height: auto;
+}
+
+.shapceship-list {
+  width: 100%;
+  background: #000;
+  background-image: url(/img/background.png);
+  background-repeat: repeat-y;
+}
+
+.one-spaceship {
+  position: fixed;
+  left: 75%;
+  width: 100%;
+  background: #222;
+}
+
+.searchbar {
+  position: relative;
+}
+
+#search-button {
+  line-height: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #fae01f;
+}
+
+#search-text {
+  width: 150px;
+}
+
+#search-button {
+  background: #fae01f;
+}
+
+#search-button:hover {
+  cursor: pointer;
+}
+
+@media(min-width:1200px) {
+  .shapceship-list {
+    width: 75%;
+  }
+  .one-spaceship {
+    width: 25%;
+  }
+  .container>div {
+    height: 100vh;
+  }
+  .searchbar {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+@font-face {
+  font-family: starWars;
+  src: url(/fonts/Starjedi.ttf);
+}
+
+.model {
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.detailDiv {
+  margin: 0px;
+  padding: 3px;
+}
+
+h1 {
+  color: #f9a602;
+  text-align: center;
+  font-size: 400%;
+  font-family: starWars;
+}
+
+.thumbnail {
+  color: red;
+}
